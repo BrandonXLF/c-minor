@@ -1,13 +1,15 @@
 {
 	"name": "c-tiny",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Infinitesimally small package for creating HTML elements.",
 	"keywords": [
 		"create",
+		"create-element",
 		"createElement",
 		"document",
 		"dom",
 		"element",
+		"front-end",
 		"html"
 	],
 	"homepage": "https://github.com/BrandonXLF/c-tiny#readme",
