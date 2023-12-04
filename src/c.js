@@ -1,4 +1,4 @@
-function c(element, attrs, ...children) {
+export default function c(element, attrs, ...children) {
 	if (typeof element == 'string') {
 		element = document.createElement(element);
 	}
