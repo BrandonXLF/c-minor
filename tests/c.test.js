@@ -1,4 +1,4 @@
-import c from '../dist/c.min.mjs';
+import c from '../src/c.js';
 import assert from 'better-assert';
 import sinon from 'sinon';
 
