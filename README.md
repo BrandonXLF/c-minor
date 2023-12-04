@@ -60,3 +60,9 @@ c(
   )
 );
 ```
+
+## Commands
+
+* `npm run build` - Create minified production versions for both using as a global function (`c.min.js`) and as an ES module (`c.min.mjs`).
+* `npm run test` - Run both code tests and `c.d.ts` type tests.
+* `npm run size` - Determine the size of the produced minified production versions.

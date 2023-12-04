@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 (async () => {
-	let text = await fs.readFile(__dirname + '/../dist/c.min.js');
+	let text = await fs.readFile(__dirname + '/../dist/c.min.mjs');
 	
-	await fs.writeFile(__dirname + '/../dist/c.min.mjs', 'export default ' + text);
+	await fs.writeFile(__dirname + '/../dist/c.min.js', text.toString().replace(/^export default/, ''));
 })();
