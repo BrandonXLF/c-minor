@@ -1,0 +1,33 @@
+{
+	"name": "c-tiny",
+	"version": "1.0.3",
+	"type": "module",
+	"main": "src/c.js",
+	"types": "c.d.ts",
+	"license": "MIT",
+	"keywords": [
+		"create",
+		"createElement",
+		"document",
+		"dom",
+		"element",
+		"html"
+	],
+	"devDependencies": {
+		"@types/node": "^20.10.3",
+		"better-assert": "^1.0.2",
+		"jsdom": "23.0.1",
+		"jsdom-global": "3.0.2",
+		"mkdirp": "^3.0.1",
+		"mocha": "^10.2.0",
+		"sinon": "^17.0.1",
+		"typescript": "^5.3.2",
+		"uglify-js": "^3.17.4"
+	},
+	"scripts": {
+		"build": "mkdirp dist && uglifyjs ./src/c.js -c -m -o ./dist/c.min.js && node ./scripts/module.js && npm run size",
+		"test": "mocha -r jsdom-global/register ./tests/* && npm run test-types",
+		"test-types": "tsc --noEmit ./type-tests/c.test-d.ts",
+		"size": "node ./scripts/size.js"
+	}
+}
