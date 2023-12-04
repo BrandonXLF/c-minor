@@ -1,0 +1,17 @@
+{
+	"name": "c-tiny-demo",
+	"version": "1.0.0",
+	"description": "Demo usage of the c-tiny package",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "webpack"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"c-tiny": "^1.0.4"
+	},
+	"devDependencies": {
+		"webpack-cli": "^5.1.4"
+	}
+}
