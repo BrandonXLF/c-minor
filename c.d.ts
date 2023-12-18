@@ -16,6 +16,8 @@ type HTMLAttributeMap = {
 
 export type Attributes<T extends HTMLElement> = EventMap<T> & PropertyMap<T> & HTMLAttributeMap;
 
-export default function c<T extends HTMLElement>(element: T, attrs?: Attributes<T>, ...children: (HTMLElement | string)[]): T;
-export default function c<T extends keyof HTMLElementTagNameMap>(element: T, attrs?: Attributes<HTMLElementTagNameMap[T]>, ...children: (HTMLElement | string)[]): HTMLElementTagNameMap[T];
-export default function c(element: string, attrs?: Attributes<HTMLElement> | null, ...children: (HTMLElement | string)[]): HTMLElement;
+export default function c<T extends HTMLElement>(element: T, attrs?: Attributes<T>, ...children: (Node | string)[]): T;
+export default function c<T extends keyof HTMLElementTagNameMap>(element: T, attrs?: Attributes<HTMLElementTagNameMap[T]>, ...children: (Node | string)[]): HTMLElementTagNameMap[T];
+export default function c<T extends HTMLElement>(element: T, ...children: (Node | string)[]): T;
+export default function c<T extends keyof HTMLElementTagNameMap>(element: T, ...children: (HTMLElement | string)[]): HTMLElementTagNameMap[T];
+export default function c(element: string, attrs?: Attributes<HTMLElement> | HTMLElement | string | null, ...children: (Node | string)[]): HTMLElement;

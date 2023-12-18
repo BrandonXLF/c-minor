@@ -8,11 +8,11 @@
 ![Test status](https://img.shields.io/github/actions/workflow/status/BrandonXLF/c-tiny/tests.yml)
 
 
-`c-tiny` is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax. It supports the addition of event listeners, attributes, properties, and children. The size of the production version is under 250 bytes!
+`c-tiny` is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax. It supports the addition of event listeners, attributes, properties, and children. The size of the compressed production version is under 250 bytes!
 
 ## Documentation
 
-`c(element, attrs, ...children)`
+`c(element[, attrs], ...children)`
 
 ### element
 
@@ -23,6 +23,8 @@ An existing HTMLElement or a string to use as the tag name of a newly created el
 ### attrs
 
 Type: `{ [key: string]: any } | undefined | null`
+
+Optional argument.
 
 An object containing key value pairs of attributes, properties, and event listeners to add to the element.
 
@@ -57,12 +59,13 @@ c(
     style: 'color: red' // Attribute
   },
   c( // Child element
-    'div', // Create new DIV element
+    'div', // New DIV element
     {
       _click: e => alert(e.target.prop), // Event listener
       $prop: 7 // Property
     },
-    'Foo', 'Bar' // Children strings
+    'Foo', // Child string
+    c('span', 'Bar') // Attributeless element
   )
 );
 ```

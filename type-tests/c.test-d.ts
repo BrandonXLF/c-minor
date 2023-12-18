@@ -65,6 +65,12 @@ c(document.getElementById('bar')! as HTMLInputElement, {
 c('div', null, 'Foo');
 c('div', null, c('span'));
 c('div', null, 'Foo', c('span'));
+c('div', null, c('span'), 'Foo');
+
+c('div', 'Foo');
+c('div', c('span'));
+c('div', 'Foo', c('span'));
+c('div', c('span'), 'Foo');
 
 c('div');
 c('div', {});

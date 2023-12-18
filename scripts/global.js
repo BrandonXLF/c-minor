@@ -8,5 +8,5 @@ const __dirname = path.dirname(__filename);
 (async () => {
 	let text = await fs.readFile(__dirname + '/../dist/c.min.mjs');
 	
-	await fs.writeFile(__dirname + '/../dist/c.min.js', text.toString().replace(/^export default/, ''));
+	await fs.writeFile(__dirname + '/../dist/c.min.js', text.toString().replace(/^export default /, ''));
 })();

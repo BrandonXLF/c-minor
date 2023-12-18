@@ -31,12 +31,12 @@ c(
     c(
         'h1',
         { class: 'primary' },
-        c('code', null, 'c-tiny'), ' Demo!'
+        c('code', 'c-tiny'), ' Demo!'
     ),
     c(
         'div',
         { class: 'emoji-cnt' },
         ...EMOJIS.map(createEmoji)
     ),
-    c('div', null, '(click above)')
+    c('div', '(click above)')
 );

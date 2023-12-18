@@ -156,6 +156,14 @@ describe('c', () => {
 		assert(el.childNodes[0].nodeValue === 'foo');
 	});
 
+	it('sets single child string without attributes argument', () => {
+		let el = c('div', 'foo');
+		
+		assert(el.childNodes.length === 1);
+		assert(el.childNodes[0] instanceof Text);
+		assert(el.childNodes[0].nodeValue === 'foo');
+	});
+
 	it('sets single child HTMLElement node', () => {
 		let child = document.createElement('div');
 		let el = c('div', null, child);
@@ -164,9 +172,25 @@ describe('c', () => {
 		assert(el.childNodes[0] === child);
 	});
 
+	it('sets single child HTMLElement node without attributes argument', () => {
+		let child = document.createElement('div');
+		let el = c('div', child);
+		
+		assert(el.childNodes.length === 1);
+		assert(el.childNodes[0] === child);
+	});
+
 	it('sets single child Text node', () => {
 		let child = document.createTextNode('foo');
 		let el = c('div', null, child);
+		
+		assert(el.childNodes.length === 1);
+		assert(el.childNodes[0] === child);
+	});
+
+	it('sets single child Text node without attributes argument', () => {
+		let child = document.createTextNode('foo');
+		let el = c('div', child);
 		
 		assert(el.childNodes.length === 1);
 		assert(el.childNodes[0] === child);
@@ -182,6 +206,31 @@ describe('c', () => {
 		];
 
 		let el = c('div', null, ...children);
+		
+		assert(el.childNodes.length === children.length);
+		
+		children.forEach((child, i) => {
+			if (typeof child == 'string') {
+				assert(el.childNodes[i] instanceof Text);
+				assert(el.childNodes[i].nodeValue === child);
+
+				return;
+			}
+			
+			assert(el.childNodes[i] === child);
+		});
+	});
+
+	it('sets children to an array of strings and Nodes without attributes argument', () => {
+		let children = [
+			'foo',
+			document.createElement('div'),
+			document.createElement('a'),
+			document.createTextNode('bar'),
+			'mango'
+		];
+
+		let el = c('div', ...children);
 		
 		assert(el.childNodes.length === children.length);
 		

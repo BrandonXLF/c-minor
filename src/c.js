@@ -1,12 +1,19 @@
 export default function c(element, attrs, ...children) {
-	if (typeof element == 'string') {
+	let isString = val => typeof val === 'string',
+		key,
+		val,
+		keyWithoutPrefix;
+
+	if (isString(element)) {
 		element = document.createElement(element);
 	}
 
-	if (attrs) {
-		for (let key in attrs) {
-			let val = attrs[key],
-				keyWithoutPrefix = key.slice(1);
+	if (attrs instanceof Node || isString(attrs)) {
+		element.append(attrs);
+	} else if (attrs) {
+		for (key in attrs) {
+			val = attrs[key];
+			keyWithoutPrefix = key.slice(1);
 			
 			if (key[0] == '_') {
 				element.addEventListener(keyWithoutPrefix, val);
