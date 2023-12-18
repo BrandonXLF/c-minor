@@ -10,7 +10,7 @@ try {
    process.exit(1);
 }
 
-console.log('-- Size of dist files --\n');
+console.log('-- Size of dist files (uncompressed) --\n');
 
 for (const file of await fs.readdir('dist')) {
     const stat = await fs.stat(join('dist', file));

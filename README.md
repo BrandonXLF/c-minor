@@ -7,8 +7,7 @@
 ![NPM license info](https://img.shields.io/npm/l/c-tiny)&nbsp;
 ![Test status](https://img.shields.io/github/actions/workflow/status/BrandonXLF/c-tiny/tests.yml)
 
-
-`c-tiny` is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax. It supports the addition of event listeners, attributes, properties, and children. The size of the compressed production version is under 250 bytes!
+`c-tiny` is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax. It supports the addition of event listeners, attributes, properties, and children. For reference, the size of the compressed production version is under 256 bytes.
 
 ## Documentation
 
