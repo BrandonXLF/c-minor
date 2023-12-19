@@ -246,7 +246,7 @@ describe('c', () => {
 		});
 	});
 
-	it('set attributes and children', () => {
+	it('sets attributes and children', () => {
 		let child = document.createElement('div');
 		
 		let el = c('div', {
