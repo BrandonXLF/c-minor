@@ -5,13 +5,16 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "webpack"
+		"build": "webpack",
+		"start": "webpack serve"
 	},
 	"license": "MIT",
 	"dependencies": {
 		"c-tiny": "file:.."
 	},
 	"devDependencies": {
-		"webpack-cli": "^5.1.4"
+		"copy-webpack-plugin": "^11.0.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1"
 	}
 }
