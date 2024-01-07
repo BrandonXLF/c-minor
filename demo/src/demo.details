@@ -1,6 +1,8 @@
+---
 name: c-tiny Demo
 description: Demo of the c-tiny package
 authors:
   - Brandon Fowler
 normalize_css: no
 load_type: d
+...
