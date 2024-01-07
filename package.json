@@ -29,10 +29,11 @@
 	"type": "module",
 	"types": "c.d.ts",
 	"scripts": {
-		"build": "mkdirp dist && uglifyjs ./src/c.js -c -m -o ./dist/c.min.mjs && node ./scripts/global.js && npm run size",
-		"test": "mocha -r jsdom-global/register ./tests/* && npm run test-types",
-		"test-types": "tsc --noEmit ./type-tests/c.test-d.ts",
-		"size": "node ./scripts/size.js"
+		"build": "node ./scripts/build.js",
+		"test": "mocha -r jsdom-global/register ./tests/* && npm run test:types",
+		"test:types": "tsc --noEmit ./type-tests/c.test-d.ts",
+		"prepare": "npm run build",
+		"size": "npm run build && node ./scripts/size.js"
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.3",
