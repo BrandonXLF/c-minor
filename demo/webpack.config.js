@@ -3,16 +3,20 @@ import CopyPlugin from 'copy-webpack-plugin';
 export default [
     {
         entry: {
-            index: './src/index.js',
+            demo: './src/demo.js',
         },
         mode: 'development',
         plugins: [
             new CopyPlugin({
                 patterns: [
                     {
-                        from: './src/index.{html,css}',
-                        to: '[name][ext]',
+                        from: './src/demo.css',
+                        to: 'demo.css',
                     },
+                    {
+                        from: './src/demo.html',
+                        to: 'index.html',
+                    }
                 ],
             }),
         ],
