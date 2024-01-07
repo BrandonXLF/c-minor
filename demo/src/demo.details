@@ -3,6 +3,7 @@ name: c-tiny Demo
 description: Demo of the c-tiny package
 authors:
   - Brandon Fowler
+resources:
+  - https://cdn.jsdelivr.net/npm/c-tiny/dist/c.min.js
 normalize_css: no
-load_type: d
 ...
