@@ -1,11 +1,11 @@
 import CopyPlugin from 'copy-webpack-plugin';
+import webpack from 'webpack';
 
 export default [
     {
         entry: {
             demo: './src/demo.js',
         },
-        mode: 'development',
         plugins: [
             new CopyPlugin({
                 patterns: [
@@ -18,6 +18,9 @@ export default [
                         to: 'index.html',
                     }
                 ],
+            }),
+            new webpack.ProvidePlugin({
+                c: ['c-tiny', 'default']
             }),
         ],
     },

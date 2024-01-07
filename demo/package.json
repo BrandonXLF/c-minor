@@ -5,8 +5,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "webpack",
-		"start": "webpack serve"
+		"build": "webpack --mode=production",
+		"start": "webpack serve --mode=development"
 	},
 	"license": "MIT",
 	"dependencies": {
