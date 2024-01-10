@@ -7,25 +7,27 @@
 ![NPM license info](https://img.shields.io/npm/l/c-minor)&nbsp;
 ![Test status](https://img.shields.io/github/actions/workflow/status/BrandonXLF/c-minor/tests.yml)
 
-c-minor is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax.
+c-minor is an extremely small and lightweight JavaScript package that enables the creation and modification of HTML elements with a concise and simple syntax.
 
-It supports the addition of event listeners, attributes, properties, and children. The size of the compressed production version is under 256 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src) see the power of c-minor.
+It supports the addition of event listeners, attributes, properties, and children all while having a compressed production version with a size of under 256 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src).
 
 ## Documentation
 
-`c(element[, attrs], ...children)`
+### Signatures
+
+`c(element, attrs, ...children)`
+
+`c(element, ...children)`
 
 ### element
 
 Type: `string | HTMLElement`
 
-An existing HTMLElement or a string to use as the tag name of a newly created element;
+An existing `HTMLElement` or `string` to use as the tag name of a newly created element.
 
 ### attrs
 
 Type: `{ [key: string]: any } | undefined | null`
-
-Optional argument.
 
 An object containing key-value pairs of attributes, properties, and event listeners to add to the element.
 
@@ -39,7 +41,7 @@ Keys without prefixes are used for attributes. For example, `class: 'foo'` sets 
 
 Type: `( string | HTMLElement )[]`
 
-The remaining arguments are for children to append to the element. A child may be either a `string` or an `HTMLElement`. If the child is a string, it is converted to a `Text` node before being appended. This means strings containing HTML syntax can be safely appended to the element.
+The remaining arguments are for children to append to the element. A child may be either a `string` or an `HTMLElement`. If the child is a string, it is converted to a `Text` node before being appended. This means strings containing HTML syntax can be safely appended to the element. Passing no children is permitted.
 
 ### Return value
 
@@ -73,6 +75,6 @@ c(
 
 ## Commands
 
-* `npm run build` - Create minified production versions for both using as a global function (`c.min.js`) and as an ES module (`c.min.mjs`).
+* `npm run build` - Generate publishable version of c-minor in the `dist` directory.
 * `npm run test` - Run both code tests and `c.d.ts` type tests.
-* `npm run size` - Determine the size of the produced minified production versions.
+* `npm run size` - Determine the size of the files produced by the build script.
