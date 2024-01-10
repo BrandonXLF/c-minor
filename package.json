@@ -21,6 +21,11 @@
 		"name": "Brandon Fowler",
 		"url": "http://www.brandonfowler.me/"
 	},
+	"files": [
+		"dist",
+		"src",
+		"c.d.ts"
+	],
 	"main": "src/c.js",
 	"repository": {
 		"type": "git",
