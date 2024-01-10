@@ -20,7 +20,7 @@ export default [
                 ],
             }),
             new webpack.ProvidePlugin({
-                c: ['c-tiny', 'default']
+                c: ['c-minor', 'default']
             }),
         ],
     },

@@ -1,15 +1,15 @@
-# c-tiny
+# c-minor
 
 ## Infinitesimally small package for creating HTML elements
 
-![NPM package minimized gzipped size](https://img.shields.io/bundlejs/size/c-tiny)&nbsp;
-![NPM version info](https://img.shields.io/npm/v/c-tiny)&nbsp;
-![NPM license info](https://img.shields.io/npm/l/c-tiny)&nbsp;
-![Test status](https://img.shields.io/github/actions/workflow/status/BrandonXLF/c-tiny/tests.yml)
+![NPM package minimized gzipped size](https://img.shields.io/bundlejs/size/c-minor)&nbsp;
+![NPM version info](https://img.shields.io/npm/v/c-minor)&nbsp;
+![NPM license info](https://img.shields.io/npm/l/c-minor)&nbsp;
+![Test status](https://img.shields.io/github/actions/workflow/status/BrandonXLF/c-minor/tests.yml)
 
-`c-tiny` is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax.
+c-minor is an extremely lightweight JavaScript package that enables the creation or modification of HTML elements with a concise and simple syntax.
 
-It supports the addition of event listeners, attributes, properties, and children. The size of the compressed production version is under 256 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-tiny/tree/fiddle/demo/src) see the power of c-tiny.
+It supports the addition of event listeners, attributes, properties, and children. The size of the compressed production version is under 256 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src) see the power of c-minor.
 
 ## Documentation
 

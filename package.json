@@ -1,5 +1,5 @@
 {
-	"name": "c-tiny",
+	"name": "c-minor",
 	"version": "1.2.1",
 	"description": "Infinitesimally small package for creating HTML elements.",
 	"keywords": [
@@ -12,9 +12,9 @@
 		"front-end",
 		"html"
 	],
-	"homepage": "https://github.com/BrandonXLF/c-tiny#readme",
+	"homepage": "https://github.com/BrandonXLF/c-minor#readme",
 	"bugs": {
-		"url": "https://github.com/BrandonXLF/c-tiny/issues"
+		"url": "https://github.com/BrandonXLF/c-minor/issues"
 	},
 	"license": "MIT",
 	"author": {
@@ -24,7 +24,7 @@
 	"main": "src/c.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/BrandonXLF/c-tiny.git"
+		"url": "https://github.com/BrandonXLF/c-minor.git"
 	},
 	"type": "module",
 	"types": "c.d.ts",

@@ -1,7 +1,7 @@
 {
-	"name": "c-tiny-demo",
+	"name": "c-minor-demo",
 	"version": "1.0.0",
-	"description": "Demo usage of the c-tiny package",
+	"description": "Demo usage of the c-minor package",
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -10,7 +10,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"c-tiny": "file:.."
+		"c-minor": "file:.."
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "^11.0.0",

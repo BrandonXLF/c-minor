@@ -29,7 +29,7 @@ c(
     c(
         'h1',
         { class: 'primary' },
-        c('code', 'c-tiny'), ' Demo!'
+        c('code', 'c-minor'), ' Demo!'
     ),
     c(
         'div',

@@ -1,9 +1,9 @@
 ---
-name: c-tiny Demo
-description: Demo of the c-tiny package
+name: c-minor Demo
+description: Demo of the c-minor package
 authors:
   - Brandon Fowler
 resources:
-  - https://cdn.jsdelivr.net/npm/c-tiny/dist/c.min.js
+  - https://cdn.jsdelivr.net/npm/c-minor/dist/c.min.js
 normalize_css: no
 ...
