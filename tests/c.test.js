@@ -19,6 +19,13 @@ describe('c', () => {
 		assert(el.tagName === 'CUSTOM-ELEMENT');
 	});
 
+	it('supports XML namespaces', () => {
+		let el = c('svg@http://www.w3.org/2000/svg');
+
+		assert(el instanceof window.SVGElement);
+		assert(el.tagName === 'svg');
+	});
+
 	it('sets attribute', () => {
 		let el = c('div', {
 			foo: 'bar'
