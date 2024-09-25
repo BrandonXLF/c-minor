@@ -9,7 +9,11 @@ type _3 = Expect<Equal<Attributes<HTMLInputElement>['$custom'], any>>;
 
 c('input') satisfies HTMLInputElement;
 c('my-custom-element') satisfies HTMLElement;
+c('svg@http://www.w3.org/2000/svg') satisfies SVGSVGElement;
+c('math@http://www.w3.org/1998/Math/MathML') satisfies MathMLElement;
 c(document.getElementById('foo')! as HTMLDivElement) satisfies HTMLDivElement;
+c(document.createElementNS('http://www.w3.org/2000/svg', 'svg')) satisfies SVGSVGElement;
+c(document.createElementNS('http://www.w3.org/1998/Math/MathML', 'math')) satisfies MathMLElement;
 
 c('input', {
     _click: function(e) {
@@ -36,6 +40,23 @@ c('my-custom-element', {
     _input: function(e) {
         e satisfies Event;
         this satisfies HTMLElement;
+    },
+    _customEvent: e => {
+        e satisfies Event;
+    },
+    $value: 123, // Is custom in this case
+    $custom: Symbol(),
+    style: 'color: red'
+});
+
+c(document.createElementNS('http://www.w3.org/2000/svg', 'svg'), {
+    _click: function(e) {
+        e satisfies MouseEvent;
+        this satisfies SVGSVGElement;
+    },
+    _input: function(e) {
+        e satisfies Event;
+        this satisfies SVGSVGElement;
     },
     _customEvent: e => {
         e satisfies Event;
