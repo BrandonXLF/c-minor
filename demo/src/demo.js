@@ -1,3 +1,5 @@
+import c from '../../src/c.js';
+
 const EMOJIS = ['\u{1F386}', '\u{1F973}', '\u{1F51C}'];
 
 function createEmoji(emoji) {
@@ -18,7 +20,7 @@ function createEmoji(emoji) {
             )
         },
         emoji
-    )
+    );
 }
 
 c(
@@ -34,7 +36,18 @@ c(
     c(
         'div',
         { class: 'emoji-cnt' },
-        ...EMOJIS.map(createEmoji)
+        ...EMOJIS.map(createEmoji),
     ),
-    c('div', '(click above)')
+    c(
+        'svg@http://www.w3.org/2000/svg',
+        { viewBox: '0 0 24 6', style: 'height: 3em;' },
+        c(
+            'path@http://www.w3.org/2000/svg',
+            {
+                style: 'stroke: #5e9aff; stroke-width: 0.25em; vector-effect: non-scaling-stroke;',
+                d: 'M 2 2 c 6 0 3 2 10 2 6 0 3 -2 10 -2'
+            }
+        )
+    ),
+    c('div', '(click an emoji)')
 );
