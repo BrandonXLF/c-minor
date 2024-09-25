@@ -9,7 +9,7 @@
 
 c-minor is an extremely small and lightweight JavaScript package that enables the creation and modification of HTML elements with a concise and simple syntax.
 
-It supports the addition of event listeners, attributes, properties, and children all while having a compressed production version with a size of under 256 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src).
+It supports the addition of event listeners, attributes, properties, and children all while having a compressed production version with a size of under 300 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src).
 
 ## Documentation
 
@@ -23,7 +23,7 @@ It supports the addition of event listeners, attributes, properties, and childre
 
 Type: `string | HTMLElement`
 
-An existing `HTMLElement` or `string` to use as the tag name of a newly created element.
+An existing `HTMLElement` or `string` to use as the tag name of a newly created element. If tag name is provided, an XML namespace can be specified using the syntax `'TAG@NAMESPACE'`. For example, `'svg@http://www.w3.org/2000/svg'`.
 
 ### attrs
 
