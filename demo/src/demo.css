@@ -21,3 +21,10 @@
 .clicked {
     font-size: 800%;
 }
+
+.stylistic-path {
+    stroke: lightblue;
+    stroke-width: 0.25em;
+    vector-effect: non-scaling-stroke;
+    stroke-linecap: round;
+}
