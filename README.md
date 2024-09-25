@@ -9,7 +9,7 @@
 
 c-minor is an extremely small and lightweight JavaScript package that enables the creation and modification of HTML elements with a concise and simple syntax.
 
-It supports the addition of event listeners, attributes, properties, and children all while having a compressed production version with a size of under 300 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src).
+It supports the addition of event listeners, attributes, properties, and children all while having a uncompressed production version with a size of under 300 bytes. You can view an [editable live demo at JSFiddle](https://jsfiddle.net/gh/get/library/pure/BrandonXLF/c-minor/tree/fiddle/demo/src).
 
 ## Documentation
 
