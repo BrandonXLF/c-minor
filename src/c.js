@@ -1,33 +1,32 @@
 export default function c(element, attrs, ...children) {
-	let isString = val => typeof val === 'string',
-		keyOrNamespace,
-		val,
-		keyWithoutPrefix;
+	let key,
+		// Stores the string "string" until the for loop
+		keyWithoutPrefixOrString = 'string',
+		val;
 
-	if (isString(element)) {
-		[element, keyOrNamespace] = element.split('@');
-		element = document['createElement' + (keyOrNamespace ? 'NS' : '')](keyOrNamespace || element, element);
+	if (typeof element == keyWithoutPrefixOrString) {
+		[element, key] = element.split('@'); // key is used for the XML namespace
+		element = document['createElement' + (key ? 'NS' : '')](key || element, element);
 	}
 
-	if (attrs instanceof Node || isString(attrs)) {
-		element.append(attrs);
-	} else if (attrs) {
-		for (keyOrNamespace in attrs) {
-			val = attrs[keyOrNamespace];
-			keyWithoutPrefix = keyOrNamespace.slice(1);
-			
-			if (keyOrNamespace[0] == '_') {
-				element.addEventListener(keyWithoutPrefix, val);
-				continue;
-			}
+	if (attrs instanceof Node || typeof attrs == keyWithoutPrefixOrString) {
+		// element.append returns undefined
+		attrs = element.append(attrs);
+	}
 
-			if (keyOrNamespace[0] == '$') {
-				element[keyWithoutPrefix] = val;
-				continue;
-			}
-
-			element.setAttribute(keyOrNamespace, val);
+	for (key in attrs || {}) {
+		keyWithoutPrefixOrString = key.slice(1);
+		val = attrs[key];
+		
+		if (key[0] == '_') {
+			element.addEventListener(keyWithoutPrefixOrString, val);
+			continue;
+		} else if (key[0] == '$') {
+			element[keyWithoutPrefixOrString] = val;
+			continue;
 		}
+
+		element.setAttribute(key, val);
 	}
 	
 	element.append(...children);
