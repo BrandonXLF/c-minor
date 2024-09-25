@@ -9,6 +9,7 @@ type _3 = Expect<Equal<Attributes<HTMLInputElement>['$custom'], any>>;
 
 c('input') satisfies HTMLInputElement;
 c('my-custom-element') satisfies HTMLElement;
+c('my-element@my-namespace') satisfies HTMLOrSVGElement;
 c('svg@http://www.w3.org/2000/svg') satisfies SVGSVGElement;
 c('math@http://www.w3.org/1998/Math/MathML') satisfies MathMLElement;
 c(document.getElementById('foo')! as HTMLDivElement) satisfies HTMLDivElement;
