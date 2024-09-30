@@ -29,7 +29,7 @@
 	"main": "src/c.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/BrandonXLF/c-minor.git"
+		"url": "git+https://github.com/BrandonXLF/c-minor.git"
 	},
 	"type": "module",
 	"types": "c.d.ts",
