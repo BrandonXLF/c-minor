@@ -1,5 +1,3 @@
-import c from '../../src/c.js';
-
 const EMOJIS = ['\u{1F386}', '\u{1F973}', '\u{1F51C}'];
 
 function createEmoji(emoji) {

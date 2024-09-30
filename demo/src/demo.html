@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="demo.css">
     </head>
     <body>
-        <script src="demo.js"></script>
+        <script type="module">
+            import c from '../../src/c.js';
+            window.c = c;
+        </script>
+        <script src="demo.js" defer></script>
     </body>
 </html>
