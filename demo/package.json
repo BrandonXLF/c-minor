@@ -1,17 +1,14 @@
 {
 	"name": "c-minor-demo",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"description": "Demo usage of the c-minor package",
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "webpack --mode=production",
-		"start": "webpack serve --mode=development"
+		"start": "ws -d .. -r  \"/ -> /demo/src/demo.html\" \"/demo.(css|js) -> /demo/src/demo.$1\""
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"copy-webpack-plugin": "^11.0.0",
-		"webpack-cli": "^5.1.4",
-		"webpack-dev-server": "^4.15.1"
+		"local-web-server": "^5.4.0"
 	}
 }
