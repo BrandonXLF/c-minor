@@ -73,7 +73,18 @@ c(
 );
 ```
 
-## Commands
+## No-Transpilation Support
+
+c-minor supports browsers that implement the `append` function on `Element` without transpilation.
+
+* Chrome: >= 54
+* Edge: >= 17
+* Firefox: >= 49
+* Internet Explorer: None
+* Opera: >= 41
+* Safari: >= 10
+
+## Development Commands
 
 * `npm run build` - Generate publishable version of c-minor in the `dist` directory.
 * `npm run test` - Run both code tests and `c.d.ts` type tests.
