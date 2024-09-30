@@ -75,7 +75,7 @@ c(
 
 ## No-Transpilation Support
 
-c-minor supports browsers that implement the `append` function on `Element` without transpilation.
+c-minor supports browsers that implement the `append` function on `Element` without transpilation. That is:
 
 * Chrome: >= 54
 * Edge: >= 17
